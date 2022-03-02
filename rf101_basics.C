@@ -64,10 +64,23 @@ void rf101_basics()
 
   //Draw all frames on a canvas
   TCanvas *c = new TCanvas("rf101_basics", "rf101_basics", 800, 400);
-//  xframe -> GetYaxis() -> SetTitleOffset(1.6);
+/*  Plot 과 Fit 한 frame, frame2 를 하나의 캔버스에 나눠 그리기
+  c -> Divide(2);
+  c -> cd(1);
+  gPad -> SetLeftMargin(0.15);
+  xframe -> GetYaxis() -> SetTitleOffset(1.6);
+  xframe -> Draw();
+  c -> cd(2);
+  gPad -> SetLeftMargin(0.15);
+  xframe2 -> GetYaxis() -> SetTitleOffset(1.6);
+  xframe2 -> Draw(); 
+*/
+// 아래는 Plot만 그리는 경우  
+  xframe -> GetYaxis() -> SetTitleOffset(1.6);
   xframe -> Draw();  
 }
 
+//-------------------------------------------------------------------------------
 /*
 [A] 데이터 없이 하는 경우 (PLOT)
 1. RooRwalVar, RooGaussian 으로 피팅 함수를 정의한다.
@@ -83,4 +96,6 @@ void rf101_basics()
 4. mean.Print() 과 sigma.Print() 를 통해 확인할 수 있다. 
 
 [C] 위의 [A] 와 [B] 를 하나의 TCanvas 에 올리기 위해 잘 파티션 한다.
+TCanvas *c 생성 후
+Divide 로 나눔.
 */
