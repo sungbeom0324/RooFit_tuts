@@ -13,7 +13,7 @@ sigma = ROOT.RooRealVar("sigma", "width of gaussian", 1, 0.1, 10)
 gauss = ROOT.RooGaussian("gauss", "gaussian PDF", x, mean, sigma)
 
 #Construct plot frame in "x"
-xframe = x.frame(Title="Gaussian pdf") # RooPlot
+xframe = x.frame(ROOT.RooFit.Name("xframe"), ROOT.RooFit.Title("RooPlot with decorations")) # RooPlot
 
 #Plot model and change patameter values
 #----------------------------------------
