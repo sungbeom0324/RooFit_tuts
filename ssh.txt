@@ -1,0 +1,20 @@
+서버 접속
+ssh -X -Y stiger97@htop.kreonet.re.kr
+또는
+ssh -X -Y stiger97@210.117.210.34
+
+이 아래 computing node 0-1,2,3 // gpu node 0-1,2 번이 있음
+ssh compute-0-1
+ssh compute-0-2
+ssh compute-0-3
+ssh gpu-0-1
+
+또는 바로
+ssh -X -Y stiger97@210.117.210.37 // gpu-0-1 
+ssh -X -Y stiger97@210.117.210.38 // gpu-0-2
+
+//----------------------------------------------------------------
+
+envice *.pdf -> (여러 pdf)열기
+
+
